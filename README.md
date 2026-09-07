@@ -1,5 +1,4 @@
 # 2K_Pascal_Module
-2K_Pascal_Module
 
 | Módulo | Nombre | Contenido Esencial (Pascal Base + URJC) |
 |---|---|---|
@@ -15,3 +14,24 @@
 | 09 | Recursión y Complejidad | Casos base y recursivos sobre listas, pila de llamadas, cálculo de complejidad Big-O (O(1), O(n), O(n²)) y MergeSort. (PDF) |
 | 10 | Estructuras Jerárquicas (Árboles ABB/AVL) | Árboles Binarios de Búsqueda (hojas, máximos, add, duplicados pila → árbol) y teoría/práctica de balanceo en Árboles AVL (rotaciones simples/dobles RR, LL, RL, LR). (PDF) |
 | 11 | Estructuras en Red (Grafos) y Algoritmia Avanzada | Grafo dirigido/ponderado en Pascal, matrices y listas de adyacencia, recorridos completos BFS (cola auxiliar) y DFS (pila auxiliar/recursión), y cálculo de caminos mínimos. (PDF) |
+
+## Instalación y Entorno de Trabajo
+
+Para compilar y depurar los ejercicios de la piscina, se requiere el compilador oficial y un entorno de desarrollo compatible:
+
+### 1. Free Pascal Compiler (FPC)
+Compilador obligatorio (versión 3.2.x o superior):
+* **Descarga oficial:** [freepascal.org/download.html](https://www.freepascal.org/download.html)
+* **Verificación en terminal:** ```bash fpc -iV```
+
+### 2. Entornos de Desarrollo (IDE)
+#### Visual Studio Code (Recomendado)
+* Descarga VS Code.
+* Instala la extensión OmniPascal o Pascal Formatter.
+
+#### Eclipse IDE (Estándar Universidades)
+* Descarga Eclipse IDE o accede vía MyApps URJC.
+* Utilizado en las prácticas universitarias para el modo depuración (Debug, puntos de interrupción y observación).
+
+#### Lazarus IDE (Opcional)
+* Descarga lazarus-ide.org (incluye FPC integrado y depurador visual nativo).
