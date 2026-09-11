@@ -35,3 +35,10 @@ Compilador obligatorio (versión 3.2.x o superior):
 
 #### Lazarus IDE (Opcional)
 * Descarga lazarus-ide.org (incluye FPC integrado y depurador visual nativo).
+
+## Compilación y ejecución
+```bash
+cd modules/module0/ex0
+fpc saiyan_power.pas
+.\saiyan_power.exe
+```
