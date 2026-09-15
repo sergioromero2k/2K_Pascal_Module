@@ -153,4 +153,68 @@ true
 | `>=` | mayor o igual que | `10 >= 10` |
 | `<=` | menor o igual que | `8 <= 12` |
 
-### ex5
+### ex5 - Integer OverFlow
+#### ShortInt
+* Es otro tipo entero, pero mucha más pequeño.
+* Su rango es: -128 ... 127
+
+Ejemplo:
+
+```bash
+var
+  ki: ShortInt;
+
+# Puede almacenar:
+-128
+-50
+0
+75
+127
+# Pero no puede representar correctamente valores fuera de ese rango.
+```
+* Si posteriormente haces una operación que intenta producir: `128` estás intentando superar la capacidad del tipo. **Ahí aparece el concepto de overflow.**
+* Overflow significa literalmente **desbordamiento**.
+* Ocurre cuando una operación produce un resultado que está fuera del rango que puede representar el tipo de dato.
+
+### ex6 - Directivas `{$Q+}` y `{$R+}`
+* Las directivas permiten decirle al compilador que añada comprobaciones adicionales durante la ejecución.
+
+#### `{$Q+}` - Overflow Checking
+* La directiva: `{$Q+}` activa Overflow Checking, le indica al compilador que compruebe determinadas operaciones aritméticas para detectar overflow.
+
+```
+Sin {$Q+}
+
+127 + 1
+   ↓
+overflow
+   ↓
+valor incorrecto/silencioso
+
+# Con {$Q+}
+127 + 1
+   ↓
+overflow
+   ↓
+Runtime error
+```
+
+#### `{$R+}` - Range Checking
+* La directiva `{$R+}` activa **Range Checking**.
+* Su función es comprobar que los valores que se asignan o manipulan estén dentro del rango permitido cuando corresponda, por ejemplo, recuerda: `-128 ... 127`, intenta colocar un valor fuera de ese rango puede provocar un error de ejecución con la comprobación activada.
+
+#### Diferencia entre {$Q+} y {$R+}
+* Es importante no confundirlas.
+
+| Directiva | Comprueba principalmente          |
+| --------- | --------------------------------- |
+| `{$Q+}`   | Overflow aritmético               |
+| `{$R+}`   | Valores fuera del rango permitido |
+
+#### Compile-time vs Runtime
+* **Compile-time** el error aparece mientras el compilador está procesando el código.
+* **Runtime** el programa consigue compilar, pero ocurre un problema mientras se ejecuta.
+
+El Ex06 está diseñado precisamente para que entiendas esta diferencia.
+
+### ex7
