@@ -2,8 +2,8 @@
 
 | Módulo | Nombre | Contenido Esencial (Pascal Base + URJC) |
 |---|---|---|
-| 00 🕖| Sintaxis y Memoria Base | Estructura de programa, tipos primitivos, div/mod, prevención de overflow y directivas `{$R+}`, `{$Q+}`. |
-| 01 | Control de Flujo | if-then-else (sin ; previo al else), case-of ordinal/rangos y lógica de cortocircuito. |
+| 00 ✅| Sintaxis y Memoria Base | Estructura de programa, tipos primitivos, div/mod, prevención de overflow y directivas `{$R+}`, `{$Q+}`. |
+| 01 🕖| Control de Flujo | if-then-else (sin ; previo al else), case-of ordinal/rangos y lógica de cortocircuito. |
 | 02 | Bucles y Esquemas | for, while, repeat-until, plantillas formales de recorrido y búsqueda, más menús interactivos. (PDF) |
 | 03 | Modularización | procedure vs function, paso por valor vs referencia (var), justificación formal (Entrada/Salida) y depuración con breakpoints. |
 | 04 | Estructuras Estáticas | Arrays 1D, string, matrices 2D, recorridos por filas/columnas y Random(). (PDF) |
