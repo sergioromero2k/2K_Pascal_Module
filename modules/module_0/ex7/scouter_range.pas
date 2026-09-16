@@ -2,8 +2,8 @@
 Program ScouterRange;
 
 Const 
-  MIN_KI = 500;
-  MAX_KI = 8500;
+  MIN_KI: Integer = 500;
+  MAX_KI: Integer = 8500;
 
 Var 
   ki: Integer;
