@@ -215,6 +215,41 @@ Runtime error
 * **Compile-time** el error aparece mientras el compilador está procesando el código.
 * **Runtime** el programa consigue compilar, pero ocurre un problema mientras se ejecuta.
 
-El Ex06 está diseñado precisamente para que entiendas esta diferencia.
+#### ¿Son lo mismo? ....No,  ¿Por qué?
+Porque **“overflow”** describe cómo se produce el valor inválido, mientras que **“range check”** describe una comprobación del valor.
+
+* ``{$Q+}``: comprueba operaciones aritméticas.
+```pascal
+ki := 127 + 1;  // Overflow
+```
+El problema ocurre durante la operación.
+* ``{$R+}``: comprueba asignaciones/accesos que producen un valor fuera del rango permitido.
+```pascal
+ki := 200;      // Fuera de rango
+```
+El problema está en que el valor no cabe en ``ShortInt``.
+Por eso, aunque ambos pueden acabar con un valor fuera de -128..127, Pascal los controla mediante dos mecanismos distintos.
 
 ### ex7
+#### Constantes 
+* Una constante es un valor que declaras una vez y que no debería cambiar durante la ejecución.
+Se declara en la sección: ```pascal const```.
+Por ejemplo
+```pascal
+const
+  MIN_VALUE: Integer = 10;
+  MAX_VALUE: Integer = 100;
+```
+* Por qué utilizar constantes, imagina que tienes: `value >= 500` es más descriptivo `value >= MIN_VALUE`. Además, si mañana el rango cambia, puedes modificar la constante en un único sitio.
+
+#### and
+* Es un operador lógico significa que ambas condiciones deben ser verdaderas.
+Por ejemplo
+```pascal
+True and True   → True
+True and False  → False
+False and True  → False
+False and False → False
+```
+* Comentar que de momento necesitas especialmente and, pero conviene conocer la diferencia. `and` todas las condiciones deben cumplirse, `or` solo necesitas una condición para ser verdadera.
+
